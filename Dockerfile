@@ -22,7 +22,7 @@ ENV PYPY_SHA256SUM faf10e7007fc2300de00d45352646cbc58f3315e2cbeeec57273081412f98
 ENV PYTHON_PIP_VERSION 9.0.1
 
 RUN set -ex \
-	&& wget -O pypy.tar.bz2 "http://buildbot.pypy.org/nightly/py3.5/pypy-c-jit-90503-6c8f0848fcf2-linux64.tar.bz2" \
+	&& wget -O pypy.tar.bz2 "http://buildbot.pypy.org/nightly/py3.5/pypy-c-jit-${PYPY_VERSION}-linux64.tar.bz2" \
 	&& echo "$PYPY_SHA256SUM  pypy.tar.bz2" | sha256sum -c \
 	&& tar -xjC /usr/local --strip-components=1 -f pypy.tar.bz2 \
 	&& rm pypy.tar.bz2 \
