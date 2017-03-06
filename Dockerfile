@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Incremental build + the commit hash?
-ENV PYPY_VERSION 90503-6c8f0848fcf2
-ENV PYPY_SHA256SUM faf10e7007fc2300de00d45352646cbc58f3315e2cbeeec57273081412f9826d
+ENV PYPY_VERSION 90577-068708147f9e
+ENV PYPY_SHA256SUM 28ed2dd33b5808bb2b3a16f5cb06b8e6df0ffd0ec121825d3cb89fe4b47db3a7
 
 # if this is called "PIP_VERSION", pip explodes with "ValueError: invalid truth value '<VERSION>'"
 ENV PYTHON_PIP_VERSION 9.0.1
